@@ -42,6 +42,8 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
             current.setDescription(cursor.getString(cursor.getColumnIndex(DBHelper.DESCRIPTION)));
             current.setTime(cursor.getString(cursor.getColumnIndex(DBHelper.TIME)));
             current.setType(cursor.getString(cursor.getColumnIndex(DBHelper.TYPE)));
+     //      current.setPriority(cursor.getString(cursor.getColumnIndex(DBHelper.PRIORITY)));
+            current.setPriority("0");
             ArrayList_Scheduled.add(current);
         }
         cursor.close();
@@ -87,7 +89,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
         holder.notifyNameTV.setText(currentLead.getName());
         holder.timeTV.setText(String.valueOf(currentLead.getTime()));
         holder.titleTV.setText(currentLead.getTitle());
-//        holder.imageIM.setImageResource(getImage(Integer.parseInt(currentLead.getPriority())));
+        holder.imageIM.setImageResource(getImage(Integer.parseInt(currentLead.getPriority())));
     }
 
     private int getImage(int type) {
@@ -111,7 +113,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
             notifyNameTV = (TextView) itemView.findViewById(R.id.notifyNameTV);
             timeTV = (TextView) itemView.findViewById(R.id.timeTV);
             titleTV = (TextView) itemView.findViewById(R.id.titleTV);
-          //  imageIM = (ImageView) itemView.findViewById(R.id.imageIM);
+            imageIM = (ImageView) itemView.findViewById(R.id.imageIM);
 
 
         }

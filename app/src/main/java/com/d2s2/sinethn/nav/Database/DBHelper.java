@@ -55,6 +55,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public SQLiteDatabase getWritableDatabase() {
+
         return super.getWritableDatabase();
+
     }
 }
