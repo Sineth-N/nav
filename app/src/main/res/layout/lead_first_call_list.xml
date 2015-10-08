@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/fab_material_white">
+
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/notifyNameTV"
+        android:paddingLeft="20dp"
+        android:paddingTop="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="time"
+        android:id="@+id/timeTV"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_below="@+id/notifyNameTV"
+        android:layout_alignLeft="@+id/notifyNameTV"
+        android:layout_alignStart="@+id/notifyNameTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Title"
+        android:id="@+id/titleTV"
+        android:layout_alignTop="@+id/timeTV"
+        android:layout_toRightOf="@+id/timeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="25dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageIM"
+        android:layout_alignBottom="@+id/timeTV"
+        android:layout_toLeftOf="@+id/notifyNameTV"
+        android:layout_toStartOf="@+id/notifyNameTV"
+        android:paddingBottom="10dp"
+        android:src="@mipmap/ic_urgent" />
+
+</RelativeLayout>

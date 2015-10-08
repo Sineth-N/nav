@@ -1,0 +1,95 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.d2s2.sinethn.nav.MainActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/app_bar">
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/Settings"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal|top"
+                android:background="#1E88E5"
+                android:text="Settings" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/ToDo"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="right|top"
+                android:background="#1E88E5"
+                android:text="To-Do" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/Scheduler"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="left|top"
+                android:background="#1E88E5"
+                android:onClick="onclick"
+                android:text="Schedule" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/leads"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="#1E88E5"
+                android:onClick="onclick"
+                android:text="Leads" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/Notifications"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="#1E88E5"
+                android:text="Notifications"
+                android:onClick="onclick"
+                />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/view_leads"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="#1E88E5"
+                android:onClick="onclick"
+                android:text="View Leads" />
+
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigate_drawer"
+        android:name="com.d2s2.sinethn.nav.NavigationDrawerFragment"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigate_drawer"
+        tools:layout="@layout/fragment_navigate_drawer" />
+</android.support.v4.widget.DrawerLayout>
+
+
+
+

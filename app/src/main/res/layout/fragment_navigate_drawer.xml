@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context="com.example.sineth.ieslandroid.NavigationDrawerFragment">
+
+    <LinearLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="280dp"
+            android:layout_height="156dp"
+            android:src="@drawable/ic_user_background_first" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/drawer"
+        android:layout_width="280dp"
+        android:layout_height="388dp"
+        android:layout_gravity="left|bottom">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</FrameLayout>

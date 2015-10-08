@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.d2s2.sinethn.nav.SelectedLead">
+    <include
+        android:id="@+id/app_bar_4"
+        layout="@layout/app_bar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Scheduled Tasks"
+            android:id="@+id/leadinfobasicTV"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/fab_material_blue_500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Name"
+            android:id="@+id/nameTV"
+            android:layout_below="@+id/leadinfobasicTV"
+            android:layout_alignLeft="@+id/leadinfobasicTV"
+            android:layout_alignStart="@+id/leadinfobasicTV"
+            android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="19dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number"
+            android:id="@+id/numberTV"
+            android:layout_below="@+id/nameTV"
+            android:layout_alignLeft="@+id/nameTV"
+            android:layout_alignStart="@+id/nameTV"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/fillnameTV"
+            android:layout_above="@+id/numberTV"
+            android:layout_toRightOf="@+id/nameTV"
+            android:layout_toEndOf="@+id/nameTV"
+            android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/filltelephoneprimaryTV"
+            android:layout_alignBottom="@+id/numberTV"
+            android:layout_toRightOf="@+id/numberTV"
+            android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp"
+            android:layout_toLeftOf="@+id/imageButton"
+            android:layout_toStartOf="@+id/imageButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Title"
+            android:id="@+id/titleTV"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/numberTV"
+            android:layout_alignLeft="@+id/numberTV"
+            android:layout_alignStart="@+id/numberTV" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Priority"
+            android:id="@+id/priorityTV"
+            android:layout_marginTop="22dp"
+            android:layout_below="@+id/titleTV"
+            android:layout_alignLeft="@+id/titleTV"
+            android:layout_alignStart="@+id/titleTV" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@mipmap/ic_call"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:layout_below="@+id/fillnameTV"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move Up"
+            android:id="@+id/moveupbutton"
+
+            android:onClick="moveUp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/numberTV"
+            android:layout_alignEnd="@+id/numberTV" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost Lead"
+            android:id="@+id/lostLeadbutton"
+            android:layout_alignTop="@+id/moveupbutton"
+            android:layout_centerHorizontal="true"
+
+            android:onClick="lostLead"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/deletebutton"
+            android:onClick="delete"
+            android:layout_alignTop="@+id/lostLeadbutton"
+            android:layout_alignRight="@+id/fillnameTV"
+            android:layout_alignEnd="@+id/fillnameTV" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Time"
+            android:id="@+id/timeTV"
+            android:layout_below="@+id/priorityTV"
+            android:layout_alignLeft="@+id/priorityTV"
+            android:layout_alignStart="@+id/priorityTV"
+            android:layout_marginTop="19dp" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textClock"
+            android:layout_alignBottom="@+id/timeTV"
+            android:layout_alignLeft="@+id/fillnameTV"
+            android:layout_alignStart="@+id/fillnameTV" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date"
+            android:id="@+id/textView10"
+            android:layout_alignTop="@+id/timeTV"
+            android:layout_toRightOf="@+id/lostLeadbutton"
+            android:layout_toEndOf="@+id/lostLeadbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Message"
+            android:id="@+id/textView11"
+            android:layout_below="@+id/textClock"
+            android:layout_alignLeft="@+id/timeTV"
+            android:layout_alignStart="@+id/timeTV"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Message"
+            android:id="@+id/messageTV"
+            android:layout_toRightOf="@+id/titleTV"
+            android:layout_above="@+id/moveupbutton"
+            android:layout_toStartOf="@+id/imageButton"
+            android:layout_below="@+id/textView11"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="10dp"
+            android:maxLines="15"
+            android:singleLine="false"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

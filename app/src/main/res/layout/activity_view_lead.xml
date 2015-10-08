@@ -1,0 +1,42 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_view_lead"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.d2s2.sinethn.nav.MainActivity">
+
+        <include
+            android:id="@+id/app_bar_view_lead"
+            layout="@layout/app_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <com.d2s2.sinethn.nav.SlidingTabLayout
+            android:id="@+id/tabs_view_lead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/pager_view_lead"
+            />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigate_drawer_view_lead"
+        android:name="com.d2s2.sinethn.nav.NavigationDrawerFragment"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigate_drawer"
+        tools:layout="@layout/fragment_navigate_drawer" />
+</android.support.v4.widget.DrawerLayout>

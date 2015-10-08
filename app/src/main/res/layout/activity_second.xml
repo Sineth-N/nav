@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.d2s2.sinethn.nav.SecondActivity">
+
+    <include
+        android:id="@+id/app_bar_3"
+        layout="@layout/app_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/app_bar_3"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_second">
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="SAVE"
+                android:textColor="@color/fab_material_white"
+                android:background="@color/fab_material_deep_purple_500"
+                android:nestedScrollingEnabled="false"
+                android:onClick="clicked" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Title"
+                android:id="@+id/textView4"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleET"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_alignLeft="@+id/leadNameET"
+                android:layout_alignStart="@+id/leadNameET" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Lead Name"
+                android:id="@+id/textView5"
+                android:layout_below="@+id/titleET"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_marginTop="30dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/leadNameET"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView5"
+                android:layout_toEndOf="@+id/textView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Note"
+                android:id="@+id/noteTV"
+                android:layout_below="@+id/textView5"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_alignStart="@+id/textView5"
+                android:layout_marginTop="35dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/noteET"
+                android:nestedScrollingEnabled="true"
+                android:layout_alignTop="@+id/noteTV"
+                android:layout_alignLeft="@+id/remarksEt"
+                android:layout_alignStart="@+id/remarksEt"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Remarks"
+                android:id="@+id/textView6"
+                android:layout_below="@+id/noteET"
+                android:layout_alignLeft="@+id/noteTV"
+                android:layout_alignStart="@+id/noteTV"
+                android:layout_marginTop="30dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/remarksEt"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/noteTV"
+                android:layout_toEndOf="@+id/noteTV" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
