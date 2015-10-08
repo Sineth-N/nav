@@ -33,7 +33,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
         current = new TaskNotify();
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         String[] col = {DBHelper.NAME, DBHelper.TITLE, DBHelper.DESCRIPTION, DBHelper.TIME, DBHelper.DATE, DBHelper.TYPE};
-        int status = 0;
+        int status = 1;
         Cursor cursor = database.query(DBHelper.TASKS_TABLE, col, DBHelper.TYPE + " = '" + status + "'", null, null, null, null);
         while (cursor.moveToNext()) {
             current.setDate(cursor.getString(cursor.getColumnIndex(DBHelper.DATE)));
@@ -66,8 +66,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
 
     public viewHolderFirstCall onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.lead_first_call_list, parent, false);
-        viewHolderFirstCall viewHolderFirstCall = new viewHolderFirstCall(view);
-        return viewHolderFirstCall;
+        return new viewHolderFirstCall(view);
     }
 
     @Override
@@ -88,7 +87,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
         holder.notifyNameTV.setText(currentLead.getName());
         holder.timeTV.setText(String.valueOf(currentLead.getTime()));
         holder.titleTV.setText(currentLead.getTitle());
-        holder.imageIM.setImageResource(getImage(Integer.parseInt(currentLead.getPriority())));
+//        holder.imageIM.setImageResource(getImage(Integer.parseInt(currentLead.getPriority())));
     }
 
     private int getImage(int type) {
@@ -112,7 +111,7 @@ public class AdapterFirstCall extends RecyclerView.Adapter<AdapterFirstCall.view
             notifyNameTV = (TextView) itemView.findViewById(R.id.notifyNameTV);
             timeTV = (TextView) itemView.findViewById(R.id.timeTV);
             titleTV = (TextView) itemView.findViewById(R.id.titleTV);
-            imageIM = (ImageView) itemView.findViewById(R.id.imageIM);
+          //  imageIM = (ImageView) itemView.findViewById(R.id.imageIM);
 
 
         }
