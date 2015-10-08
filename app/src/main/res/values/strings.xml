@@ -43,4 +43,6 @@
     <string name="No">No</string>
     <string name="title_activity_to_do_notifier">ToDoNotifier</string>
     <string name="title_activity_notifier">Notifier</string>
+    <string name="menu_settings">Settings</string>
+    <string name="speak">Speak</string>
 </resources>

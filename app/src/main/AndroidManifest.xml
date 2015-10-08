@@ -66,6 +66,28 @@
         <activity
             android:name=".Notifier"
             android:label="@string/title_activity_notifier" />
+
+
+        <activity
+            android:name=".Alarm.MainActivityAlarm"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".Alarm.ListeningActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+
+        <receiver
+            android:name=".Alarm.AlarmReceiver"
+            android:process=":remote" />
+
+        <service
+            android:name=".Alarm.Remind"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

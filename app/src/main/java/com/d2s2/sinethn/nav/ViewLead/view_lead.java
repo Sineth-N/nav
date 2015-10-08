@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.d2s2.sinethn.nav.Alarm.MainActivityAlarm;
 import com.d2s2.sinethn.nav.Fragments.FragmentFirstCall;
 import com.d2s2.sinethn.nav.Fragments.FragmentInitiated;
 import com.d2s2.sinethn.nav.Fragments.FragmentLost;
@@ -73,7 +74,7 @@ public class view_lead extends ActionBarActivity {
             return true;
         }
         if (id==R.id.add){
-            startActivity(new Intent(this, SelectedLead.class));
+            startActivity(new Intent(this, MainActivityAlarm.class));
         }
 
         return super.onOptionsItemSelected(item);
